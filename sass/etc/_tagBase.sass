@@ -1,0 +1,57 @@
+.built-tag
+	border: 1px solid #cdcdcd
+
+	.built-tag-header
+		background-color: #cdcdcd
+		color: white
+		padding: 8px
+		color: #444
+		text-transform: uppercase
+		font-weight: bold
+		position: relative
+		cursor: pointer
+
+		i
+			position: absolute
+			right: 15px
+
+	.built-tag-inner
+		padding: 8px
+		display: none
+
+		span
+			display: block
+			font-weight: bold
+
+			> span 
+				display: inline-block 
+				font-weight: 300
+				margin-left: 60px
+
+			a
+				background: none
+				color: #444
+				text-shadow: none
+				font-weight: 300
+				float: none
+				margin-left: 60px
+				padding: 0
+
+		.password
+			
+			span
+				position: relative
+
+				&:hover
+					&:after
+						opacity: .3
+				
+				&:after
+					content: " "
+					position: absolute
+					left: 0
+					right: 0
+					top: 0
+					bottom: 0
+					background-color: black
+

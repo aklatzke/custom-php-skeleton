@@ -1,0 +1,62 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "b0ba327377d7def13731bfc2064d0152",
+    "packages": [
+        {
+            "name": "akl/rout",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/aklatzke/Rout.git",
+                "reference": "e80a31fc3a73ba879bb9ffef50a77fa0b528a173"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/aklatzke/Rout/zipball/e80a31fc3a73ba879bb9ffef50a77fa0b528a173",
+                "reference": "e80a31fc3a73ba879bb9ffef50a77fa0b528a173",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.0.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "AKL\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Mit"
+            ],
+            "authors": [
+                {
+                    "name": "Andrew Klatzke",
+                    "email": "andrew@andrewklatzke.com"
+                }
+            ],
+            "description": "A simple router.",
+            "keywords": [
+                "route delegation",
+                "router",
+                "routes",
+                "routing"
+            ],
+            "time": "2014-12-21 23:05:16"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "akl/rout": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

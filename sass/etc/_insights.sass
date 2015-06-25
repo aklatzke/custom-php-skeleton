@@ -1,0 +1,43 @@
+%list-style-item
+	padding-top: 10px
+	padding-bottom: 10px
+	position: relative
+	margin-top: 5px
+	border-left: 2px solid transparent
+	box-sizing: border-box
+
+div.list-item
+	@extend %list-style-item
+
+	$paddingDepth : 15
+	$firstColor : #cdcdcd
+	$secondColor: rgb(0, 125, 0)
+
+	display: none
+
+	@for $i from 0 through 10
+		&.depth-#{$i}
+			padding-left: (($i + 1) * $paddingDepth) + px
+			background-color: lighten( $firstColor, percentage(($i * 10)/100) )
+			border-color: lighten( $secondColor, percentage(($i * 10)/100) )
+
+	&.depth-0
+		border-right: 2px solid $secondColor
+		display: block
+
+	.inner-text
+		display: block
+		padding-top: 2px
+		padding-bottom: 2px
+		position: relative
+
+		&.has-children
+			cursor: pointer
+		
+			&:after
+				content: "\f150"
+				position: absolute
+				right: 25px
+				top: calc(50% - 8px)
+				color: rgba(0,0,0,.6)
+				font-family: FontAwesome

@@ -1,0 +1,19 @@
+{
+    "name": "akl/notes",
+    "require": {
+        "akl/rout": "dev-master"
+    },
+    "autoload" : {
+        "psr-4" : {
+            "AKL\\" : "src/akl"
+        }
+    },
+    "license": "MIT",
+    "minimum-stability" : "dev",
+    "authors": [
+        {
+            "name": "Andrew Klatzke",
+            "email": "andrew@klatzke.com"
+        }
+    ]
+}

@@ -1,0 +1,167 @@
+// keyframes mixin
+=keyframes($name)
+	@-webkit-keyframes #{$name}
+		@content
+	@-moz-keyframes #{$name}
+		@content
+	@-ms-keyframes #{$name}
+		@content
+	@keyframes #{$name}
+		@content
+
+.add-btn
+	position: fixed
+	right: 28px
+	top: 50%
+	display: inline-block
+	width: 50px
+	height: 50px
+	color: white
+	background-color: rgba(0, 175, 255, 1) 
+	line-height: 50px
+	text-align: center
+	border-radius: 50%
+	transition: all .2s ease
+	z-index: 999
+
+	&:hover
+		background-color: darken(rgba(0,175, 255, 1), 5%)
+
+	i
+		line-height: 50px
+		font-size: 24px
+
+.thinking
+	box-sizing: border-box
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	overflow: hidden
+	background-color: rgba(0,0,0,.6)
+	
+	&:after
+		position: absolute
+		content: " "
+		box-sizing: border-box
+		top: 50%
+		height: 25px
+		margin-top: -12.5px
+		left: 50%
+		width: 25px
+		margin-left: -12.5px
+		border-radius: 50%
+		background-color: white
+		animation: thinkLeft 2s ease infinite
+		-webkit-animation: thinkLeft 2s ease infinite
+
+	&:before
+		position: absolute
+		content: " "
+		box-sizing: border-box
+		top: 50%
+		height: 25px
+		margin-top: -12.5px
+		left: 50%
+		width: 25px
+		border-radius: 50%
+		margin-left: -12.5px
+		background-color: white
+		z-index: 10
+		animation: thinkRight 2s ease infinite
+		-webkit-animation: thinkRight 2s ease infinite
+
++keyframes(thinkLeft)
+	0%
+		left: 50%
+	33%
+		left: 25%
+	66%
+		left: 75%
+		background-color: red
+	100%
+		left: 50%
+
++keyframes(thinkRight)
+	0%
+		left: 50%
+	33%
+		left: 75%
+	66%
+		left: 25%
+		background-color: orange
+	100%
+		left: 50%
+
+=flash-type($color)
+	background-color: $color
+	border: 2px solid lighten($color, 10%)
+
+.flash-message
+	+flash-type(#cdcdcd)
+	height: 55px
+	width: 100%
+	box-sizing: border-box
+	color: white
+	position: relative
+	display: none
+
+	&.notice
+		+flash-type(rgba(0, 125, 225, 1))
+	&.warning
+		+flash-type(#ff8e2e)
+	&.error
+		+flash-type(rgba(225, 125, 125, 1))
+
+	.flash-message-close
+		position: absolute
+		font-size: 24px
+		line-height: 55px
+		right: 25px
+		cursor: pointer
+		top: 0
+
+		i
+			line-height: 50px
+
+	.flash-message-text
+		font-family: 'Roboto Condensed'
+		text-transform: uppercase
+		line-height: 52px
+		padding-left: 85px
+
+.tab-target
+	display: none
+
+	&.active-tab
+		display: block
+
+.tab-list
+	display: block
+	padding: 0
+	list-style-type: none
+	margin: 0
+
+	.tab-item
+		display: inline-block
+		text-align: center
+		border-bottom: 1px solid #cdcdcd
+		box-sizing: border-box
+		padding-top: 10px
+		padding-bottom: 10px
+		background-color: #cdcdcd
+		text-transform: uppercase
+		cursor: pointer
+		font-weight: bold
+		-webkit-transition: all .2s ease
+		transition: all .2s ease
+
+		&.active
+			background-color: rgb(125, 145, 165)
+			color: white
+
+@for $i from 1 through 10
+	.tab-items-#{$i}
+		width: percentage(1/$i)
+
