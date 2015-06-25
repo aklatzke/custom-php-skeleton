@@ -2,14 +2,7 @@
 
 namespace AKL\Controller;
 
-use AKL\Note\File as File;
-use AKL\Note\Note as Note;
-use AKL\Note\Collection as Collection;
-
-use AKL\View\View as View;
-use AKL\Renderer\NoteRenderer as Renderer;
-
-use AKL\Parser\Parser as Parser;
+use AKL\View\View as View;;
 
 use AKL\Rout as Rout;
 
